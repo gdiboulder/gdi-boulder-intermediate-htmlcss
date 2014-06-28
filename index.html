@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
- 
+
 <head>
     <meta charset="utf-8">
 
@@ -56,26 +56,63 @@
                     <strong>Password:</strong>domorefaster</p>
                 <br/>
                 <h3>Download workshop files</h3>
-                <p>If you have not already downloaded the files for this workshop - please download them at <a href="http://gdiboulder.com/bootstrap" target="blank">gdiboulder.com/bootstrap</a>
+                <p>Please download workshop files at: <a href="http://gdiboulder.github.io/gdi-boulder-intermediate-htmlcss/workshop-files.zip" target="blank">http://gdiboulder.github.io/gdi-boulder-intermediate-htmlcss</a>
                 </p>
             </section>
             <section>
                 <h2>Thanks to our sponsor:</h2>
-                <img src="images/sponsors/sendgrid.jpg" style="border:none; width: 400px;" alt="SendGrid"/>
+                <img src="images/sponsors/sendgrid.jpg" style="border:none; width: 400px;" alt="SendGrid" />
             </section>
             <section>
-                <h2>Meet your instructor: Cara Jo Miller</h2>
-                <ul>
-                    <li>Co-founder: Girl Develop It Boulder</li>
-                    <li>Lead Designer: Simple Energy</li>
-                    <li>E-mail: carajo@girldevelopit.com</li>
-                    <li>Twitter: @corrinajo</li>
-                    <li>Lover of all things glitter</li>
-                </ul>
+                <h2>Thanks to our sponsor:</h2>
+                <img src="images/sponsors/hyperdog.png" style="border:none; width: 400px;" alt="Hyperdog Media" />
             </section>
+            <section>
+          <h3>Class notes</h3>
+          <p>All slides are available to download at <a href="http://gdiboulder.github.io/gdi-boulder-intermediate-htmlcss">http://gdiboulder.github.io/gdi-boulder-intermediate-htmlcss</a></p>
+          <p>All class slides are also available on github at <a href="https://github.com/gdiboulder">github.com/gdiboulder</a></p>
+        </section>
+        <!-- Welcome-->
+        <section class="hide-pdf">
+          <h3>Welcome!</h3>
+          <div class = "left-align">
+          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+          <p class ="green">Some "rules"</p>
+          <ul>
+            <li>We are here for you!</li>
+            <li>Every question is important</li>
+            <li>Help each other</li>
+            <li>Have fun</li>
+          </ul>
+          </div>
+        </section>
+        <section class="hide-pdf">
+          <h3>About your instructor</h3>
+          <div class="left">
+            <h4>Cara Jo Miller</h4>
+            <ul>
+              <li>Moved to Colorado from Detroit, MI</li>
+              <li>Lead Designer at Simple Energy</li>
+              <li>Founding member of Girl Develop It Detroit</li>
+              <li>Co-Founder of GDI Boulder</li>
+              <li>Twitter: <a href="http://twitter.com/corrinajo">@corrinajo</a></li>
+              <li>E-mail: <a href="mailto:carajo@girldevelopit.com">carajo@girldevelopit.com</a></li>
+            </ul>
+          </div>
+        </section>
+        <section>
+            <h3>Thank you to our Teaching Assistants today</h3>
+            <p>Valerie</p>
+            <p>Caitlin</p>
+        </section>
+        <section>
+            <h3>Now it's all about you!</h3>
+
+        </section>
             <section>
                 <h2>What we'll be covering in this class</h2>
-                <p>We'll be jumping in right where the intro class left off.</p>
+                <p>We'll be jumping into HTML/CSS right where the beginner class left off.</p>
+                <p>We will not be going over the previous class, we just don't have the time! </p>
             </section>
             <section>
                 <h3>We will be building a profile site from scratch</h3>
@@ -86,12 +123,16 @@
             </section>
             <section>
                 <h3>Workshop files</h3>
+                <p>Last reminder to download the files for today's class! <a href="http://gdiboulder.github.io/gdi-boulder-intermediate-htmlcss/workshop-files.zip" target="blank">http://gdiboulder.github.io/gdi-boulder-intermediate-htmlcss</a></p>
                 <ul>
-                    <li>Download</li>
-                    <li>File structure</li>
-                    <li>Sample Images</li>
+                    <li>We have provided a folder that contains sample images for you to use today. We encourage you to be creative so don't feel like you're restricted to these images</li>
+                    <li>We've also included a blank index.html file for you to work from, as well as the final site for you to use as a reference if you get stuck.</li>
                 </ul>
-
+            </section>
+            <section>
+                <h3>Folder Structure</h3>            
+                <p>We've set up the folder structure for the site today to reflect common practices used. </p>
+                <img src="images/folder-structure.png" alt="folder structure" />
             </section>
             <section data-background="#f05b62">
                 <h1 style="color: #fafafa;">Common Applications</h1>
@@ -548,15 +589,17 @@ nav ul {
                     <code>.container</code>it will be 1024px wide and centered.</p>
             </section>
             <section>
-            <h3>Develop It!</h3>
-            <p>Let's make some small tweaks to the navigation
-            <ul>
-                <li>Remove the underlines on the links with <code>text-decoration</code></li>
-                <li>Change the color of the links</li>
-                <li>Try adding a background color on hover</li>
-            </ul>
+                <h3>Develop It!</h3>
+                <p>Let's make some small tweaks to the navigation
+                    <ul>
+                        <li>Remove the underlines on the links with
+                            <code>text-decoration</code>
+                        </li>
+                        <li>Change the color of the links</li>
+                        <li>Try adding a background color on hover</li>
+                    </ul>
 
-        </section>
+            </section>
             <section data-background="#f05b62">
                 <h1 style="color: #fafafa;">Hero Section</h1>
             </section>
@@ -608,10 +651,10 @@ nav ul {
 }
 </code></pre> 
             </section>
-<section>
+            <section>
                 <h3>Hero: CSS</h3>
                 <p>Let's give it a height and some padding too.</p>
-<pre><code class="css">#hero {
+                <pre><code class="css">#hero {
     background: url(../images/flatirons.png) no-repeat top left;
     color: #fafafa;
     text-align: center;
@@ -619,8 +662,10 @@ nav ul {
     padding: 25px 0;
 }
 </code></pre> 
-<p>Remember our Box Model. Padding adds to the height &amp; width of elements.</p>
-<p>So the height of our hero will be <code>400px</code></p>
+                <p>Remember our Box Model. Padding adds to the height &amp; width of elements.</p>
+                <p>So the height of our hero will be
+                    <code>400px</code>
+                </p>
             </section>
             <section>
                 <h3>Well, that was unexpected...</h3>
@@ -676,7 +721,7 @@ nav ul {
                     <p>20px radius top right</p>
                     <p>40px radius bottom right</p>
                     <p>80px radius bottom left</p>
-<pre><code class="css">#hero img {
+                    <pre><code class="css">#hero img {
     border-radius: 10px 20px 40px 80px;
 }</code></pre>
                     <img src="images/radius-10-20-40-80.png" />
@@ -708,36 +753,42 @@ nav ul {
                     <h3>Vendor Prefixes</h3>
                     <p>Each browser has their own:</p>
                     <ul>
-                    <li><span class="green">Chrome:</span> -webkit-</li>
-                    <li><span class="green">Firefox:</span> -moz-</li>
-                    <li><span class="green">Safari:</span> -webkit-</li>
-                    <li><span class="green">Opera:</span> -o-</li>
+                        <li>
+                            <span class="green">Chrome:</span>-webkit-</li>
+                        <li>
+                            <span class="green">Firefox:</span>-moz-</li>
+                        <li>
+                            <span class="green">Safari:</span>-webkit-</li>
+                        <li>
+                            <span class="green">Opera:</span>-o-</li>
                     </ul>
                 </section>
                 <section>
                     <h3>Using Prefixes</h3>
-<pre><code class="css">#hero img {
+                    <pre><code class="css">#hero img {
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%;
 }</code></pre>
-<p>Order matters! The non-prefixed version should always go last.</p>   
+                    <p>Order matters! The non-prefixed version should always go last.</p>
+                </section>
+                <section>
+                    <h3>NOTE:</h3>
+                    <p>While you should always use the vendor prefixes when writing code, today we're just going to use the non-prefixed property.</p>
+                    <p>This is to save time during the code exercises</p>
+                </section>
+            </section>
+            <section data-background="#f05b62">
+                <h1 style="color: #fafafa;">Back to our Hero!</h1>
             </section>
             <section>
-                <h3>NOTE:</h3>
-                <p>While you should always use the vendor prefixes when writing code, today we're just going to use the non-prefixed property.</p>
-                <p>This is to save time during the code exercises</p>
-            </section>
-        </section>
-        <section data-background="#f05b62">
-            <h1 style="color: #fafafa;">Back to our Hero!</h1>
-        </section>
-        <section>
-            <h3>Background-size</h3>
-            <p>Notice how the image is too large for the section? Let's fix that with a new property called <code>background-size</code></p>
-<pre><code class="css">#hero {
+                <h3>Background-size</h3>
+                <p>Notice how the image is too large for the section? Let's fix that with a new property called
+                    <code>background-size</code>
+                </p>
+                <pre><code class="css">#hero {
     background: url(../images/flatirons.png) no-repeat top left;
     color: #fafafa;
     text-align: center;
@@ -746,30 +797,31 @@ nav ul {
     background-size: cover;
 }
 </code></pre>
-    <p><code>cover</code> scales the image to the largest size such that both its width and its height can fit inside the content area.</p>
-        </section>
+                <p>
+                    <code>cover</code>scales the image to the largest size such that both its width and its height can fit inside the content area.</p>
+            </section>
 
-        <section>
-            <h3>Develop It!</h3>
-            <p>Let's make some small tweaks to the Hero
-            <ul>
-                <li>Move the image down from the top.</li>
-                <li>Adjust the font size of the header.</li>
-                <li>Add a border to the span</li>
-            </ul>
+            <section>
+                <h3>Develop It!</h3>
+                <p>Let's make some small tweaks to the Hero
+                    <ul>
+                        <li>Move the image down from the top.</li>
+                        <li>Adjust the font size of the header.</li>
+                        <li>Add a border to the span</li>
+                    </ul>
 
-        </section>
-        <section data-background="#f05b62">
-            <h1 style="color: #fafafa;">3-column Content Area</h1>
-        </section>
-        <section>
-            <h3>Why 3 columns?</h3>
-            <p>Because 2 columns is so 2013</p>
-        </section>
-        <section>
-            <h3>3 Column: HTML</h3>
-            <p>Our code should look something like this:</p>
-<pre><code class="xml">&lt;section id="main-content">
+            </section>
+            <section data-background="#f05b62">
+                <h1 style="color: #fafafa;">3-column Content Area</h1>
+            </section>
+            <section>
+                <h3>Why 3 columns?</h3>
+                <p>Because 2 columns is so 2013</p>
+            </section>
+            <section>
+                <h3>3 Column: HTML</h3>
+                <p>Our code should look something like this:</p>
+                <pre><code class="xml">&lt;section id="main-content">
     <h3>...</h3>
     &lt;section class="column">
         &lt;img src="images/photographer.jpg">
@@ -777,37 +829,38 @@ nav ul {
         &lt;p>I travel to some pretty awesome places...</p>
         &lt;a href="photos.html" class="btn">See my photos</a>
     &lt;/section>   
-    &lt;!-- Repeat .column x3 --> </code></pre>    
-        </section>
-        <section>
-            <h3>3 Column: CSS</h3>
-            <p>Now that we have our 3 columns, we want them to appear next to each other. We can do this by floating them all left.</p>
-<pre><code class="css">.column {
+    &lt;!-- Repeat .column x3 --> </code></pre> 
+            </section>
+            <section>
+                <h3>3 Column: CSS</h3>
+                <p>Now that we have our 3 columns, we want them to appear next to each other. We can do this by floating them all left.</p>
+                <pre><code class="css">.column {
     float: left;
     width: 30%;
     padding: 15px;
 }        </code></pre>
-<p>We used 30%, because it let's us perfectly spaced columns without doing math! Don't forget padding (or margin) to give the columns so space.</p>
-        </section>
-        <section>
-            <h3>Wow. Large Images.</h3>
-            <p>The images didn't scale with the columns, because they ignore constraints like <code>div</code> width, unless you tell it to do so.</p>
-<pre><code class="css">.column img {
+                <p>We used 30%, because it let's us perfectly spaced columns without doing math! Don't forget padding (or margin) to give the columns so space.</p>
+            </section>
+            <section>
+                <h3>Wow. Large Images.</h3>
+                <p>The images didn't scale with the columns, because they ignore constraints like
+                    <code>div</code>width, unless you tell it to do so.</p>
+                <pre><code class="css">.column img {
     width: 90%;
     max-width: 90%;
 }</code></pre>
-<p>There we go!</p>
-<p>Let's add a border radius to it too, because we &hearts; circles</p>
-<pre><code class="css">.column img {
+                <p>There we go!</p>
+                <p>Let's add a border radius to it too, because we &hearts; circles</p>
+                <pre><code class="css">.column img {
     width: 90%;
     max-width: 90%;
     border-radius: 50%;
 }</code></pre>
-        </section>
-        <section>
-            <h3>3 Column: Container</h3>
-            <p>We've got our 3 column layout set, our images are scaled based on the width of the column, but our columns are still bumping against the edges of the broswer.</p>
-<pre><code class="xml">&lt;section id="main-content">
+            </section>
+            <section>
+                <h3>3 Column: Container</h3>
+                <p>We've got our 3 column layout set, our images are scaled based on the width of the column, but our columns are still bumping against the edges of the broswer.</p>
+                <pre><code class="xml">&lt;section id="main-content">
     <div class="container">
         <h3>...</h3>
         &lt;section class="column">
@@ -821,18 +874,180 @@ nav ul {
         &lt;/section>
     </div>
 &lt;/section></code></pre>
-<p>Adding the container, that we already defined the width of, makes the everything line up.</p>
-        </section>
-        <section>
-            <h3>Develop It!</h3>
-            <p>Let's make some small tweaks to these columns
-            <ul>
-                <li>Adjust the font size of the main header of the content area</li>
-                <li>Adjust the font size of the headers in the columns. Try changing their colors too.</li>
-                <li>Add a border to the images to make them stand out a bit more.</li>
-            </ul>
+                <p>Adding the container, that we already defined the width of, makes the everything line up.</p>
+            </section>
+            <section>
+                <h3>Develop It!</h3>
+                <p>Let's make some small tweaks to these columns
+                    <ul>
+                        <li>Adjust the font size of the main header of the content area</li>
+                        <li>Adjust the font size of the headers in the columns. Try changing their colors too.</li>
+                        <li>Add a border to the images to make them stand out a bit more.</li>
+                    </ul>
+            </section>
+            <section>
+                <section data-background="#f05b62">
+                    <h1 style="color: #fafafa;">SVG Graphics</h1>
+                </section>
+                <section>
+                    <h2>SVG Graphics</h2>
+                    <p>Designers everywhere have always wanted to use vector based graphics on their sites because of their quality.</p>
+                    <p>Well now you can!</p>
+                </section>
+                <section>
+                    <h2>It's not that new really</h2>
+                    <p>It's been a W3C (World Wide Web Consortium) since 1999</p>
+                    <p>In recent years browsers are becoming more and more compatable with SVG graphics.</p>
+                    <p>Once upon a time, .png graphics weren't supported in browsers, soon the world will know about SVG!</p>
+                </section>
+                <section>
+                    <h2>How to use SVG today</h2>
+                    <p>Use Adobe Illustrator, or other vector program, to create a high quality image.</p>
+                    <p>Save it as a .svg file.</p>
+                    <p>Save a high res .png image as a fallback.</p>
+                </section>
+                <section>
+                    <h2>Include SVG</h2>
+                    <p>Use SVG as an image:</p>
+                    <pre><code>&lt;img src="image.svg" onerror="this.onerror=null; this.src='image.png'"></code></pre>
+                    <p>Use SVG as a background image:</p>
+                    <p class="blue">HTML:</p>
+                    <pre><code>&lt;a href="/" class="logo">
+  GDI
+&lt;/a></code></pre>
+                    <p class="blue">CSS:</p>
+                    <pre><code class="css">.logo {
+  display: block;
+  text-indent: -9999px;
+  width: 100px;
+  height: 82px;
+  background: url(kiwi.svg);
+  background-size: 100px 82px;
+}</code></pre>
+                </section>
+                <section>
+                    <h2>Browser Support</h2>
+                    <p>Our favorite topic - Internet explorer</p>
+                    <img src="images/svg-support.png" alt="SVG support" />
+                    <p>Chris Coyer has written an <a href="http://css-tricks.com/using-svg/">amazing article</a> on SVG and browser compatability with tons of work arounds for our BFF IE8.</p>
+                </section>
+            </section>
+            <section>
+                <h3>SVG Social Icons</h3>
+                <p>Now that we know how awesome SVG graphics are, let's use them in our social links section.</p>
+            </section>
+            <section>
+                <h3>Social Links: HTML</h3>
+                <pre><code class="html">&lt;section id="social">
+    &lt;ul>
+        &lt;li>
+            &lt;a href="..">
+                &lt;img src="images/facebook.svg" alt="Facebook" />
+            &lt;/a>
+        &lt;/li>
+        &lt;!-- Repeat for all social links you want to include -->
+    &lt;/ul>
+&lt;/section>
+</code></pre>
+                <p>We're using a list for these links for the exact same reason we used them in the navigation. They are a list of links, and should be marked up accordingly.</p>
+            </section>
+            <section>
+                <h3>Social Links: CSS</h3>
+                <p>We'll need to add a background, some padding, account for the floated list items.</p>
+                <pre><code class="css">#social {
+    background: #57BEC5;
+    color: #fafafa;
+    padding: 25px 0;
+    overflow: hidden;
+}
+#social li {
+    float: left;
+    width: auto;
+    padding: 20px;
+}</code></pre> 
+            </section>
+            <section>
+                <h3>Centering the List</h3>
+                <p>First we should put our social links in a container! We'll also add in a headline.</p>
+                <pre><code class="xml">&lt;section id="social">
+    &lt;div class="container">
+        &lt;h3>...&lt;/h3>
+        &lt;ul>
+            ...
+        &lt;/ul>
+    &lt;/div>
+&lt;/section></code></pre>
+                <p>Next we'll center the
+                    <code>ul</code>with our magic auto margin.</p>
+                <pre><code class="css">#social ul {
+    width: 520px;
+    margin: 0 auto;
+}</code></pre>
+                <p>We'll need to give it a width, for the auto margin to work with. This may take some tinkering in the inspect element to get the right width.</p>
+            </section>
+            <section>
+                <h3>Develop It!</h3>
+                <ul>
+                    <li>Style the headline using the Descendant Selector.</li>
+                    <li>If you have Illustrator or another program to modify .svg graphics, change the colors to match your site.</li>
+                </ul>
+            </section>
 
-        </section>
+
+            <section data-background="#f05b62">
+                <h1 style="color: #fafafa;">@font-face</h1>
+                <h3 style="color: #fafafa;">Or really, the reason you took this class.</h3>
+            </section>
+            <section>
+        <h3>@font-face</h3>
+        <p>The world of HTML has progressed beyond Times New Roman and Arial</p>
+        <p class = "green">Yay!</p>
+        <p>How do we use new and cool fonts?</p>
+      </section>
+      <section>
+          <h3>Class, meet Google WebFonts</h3>
+          <p>Google has hundreds of free, open-source fonts that have been optimized for the web, and ready for us to use!</p>
+          <p>The service runs on Google's servers which are fast, reliable and tested. Google provides this service free of charge.</p>
+      </section>
+      <section>
+          <h2>Seriously, I'm about to change your life.</h2>
+      </section>
+      <section data-background="#f05b62">
+                <h2 style="color: #fafafa;"><a href="http://www.google.com/fonts" style="color: #fafafa;" target="blank">www.google.com/fonts</a></h2>
+            </section>
+      <!-- Fonts-->
+      <section>
+        <h3>@font-face</h3>
+        <p>In our example, we've used Lato for the body and Bree Serif for the headlines</p>
+        <p>You can use any font you'd like!</p>
+        <img src="images/lato.png" alt="lato" style="width: 40%; float: left;"/>
+        <img src="images/bree.png" alt="bree" style="width: 40%; float: right;"/>
+      </section>
+      <section>
+          <h3>Using Google Fonts in 3 steps!</h3>
+          <ol>
+            <li>Search the hundreds of font families, then add them to your collection.</li>
+            <li>Compare and refine the collection - think about what styles you *NEED*</li>
+            <li>Grab the code that Google prepares for you and add it to your site!</li>
+        </ol>
+          <pre><code class = "html">
+  @import url(http://fonts.googleapis.com/
+  css?family=Lato:300,400,700,300italic,400italic|Bree+Serif);
+</code></pre>
+        <a href = "http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic|Bree+Serif" target ="_blank">What does that do?</a>
+      </section>
+
+      <section>
+        <h3>Integrating into the CSS</h3>
+<pre><code class = "html">
+body{
+  font-family: 'Lato', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bree Serif', serif;
+}
+</code></pre>
+      </section>
         </div>
         <footer>
             <div class="copyright">
