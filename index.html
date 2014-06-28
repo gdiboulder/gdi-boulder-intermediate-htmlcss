@@ -1,0 +1,902 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <meta charset="utf-8">
+
+    <title>Intermediate HTML/CSS &amp; Intro to Responsive Design &hearts; Girl Develop It Boulder</title>
+
+    <meta name="description" content="">
+    <meta name="author" content="Cara Jo Miller">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="reveal/css/reveal.css">
+    <link rel="stylesheet" href="reveal/css/theme/simple.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <!-- light editor-->
+    <link rel="stylesheet" href="reveal/lib/css/light.css">
+    <!-- dark editor<link rel="stylesheet" href="reveal/lib/css/dark.css">-->
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+    if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'reveal/css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    }
+    </script>
+    <link rel="icon" type="image/x-icon" href="reveal/favicon.ico" />
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <!-- Opening -->
+            <section>
+                <img src="images/gdi_logo_badge.png" style="padding: 10px; width:400px;" alt="gdi" />
+                <h3>Intermediate HTML/CSS &amp; Intro to Responsive Design</h3>
+            </section>
+            <section>
+                <h2>Welcome!</h2>
+                <h4 class="blue">Wifi Info</h4>
+                <p>
+                    <strong>Network:</strong>Simple Energy Guest</p>
+                <p>
+                    <strong>Password:</strong>domorefaster</p>
+                <br/>
+                <h3>Download workshop files</h3>
+                <p>If you have not already downloaded the files for this workshop - please download them at <a href="http://gdiboulder.com/bootstrap" target="blank">gdiboulder.com/bootstrap</a>
+                </p>
+            </section>
+            <section>
+                <h2>Thanks to our sponsor:</h2>
+                <img src="images/sponsors/sendgrid.jpg" style="border:none; width: 400px;" alt="SendGrid"/>
+            </section>
+            <section>
+                <h2>Meet your instructor: Cara Jo Miller</h2>
+                <ul>
+                    <li>Co-founder: Girl Develop It Boulder</li>
+                    <li>Lead Designer: Simple Energy</li>
+                    <li>E-mail: carajo@girldevelopit.com</li>
+                    <li>Twitter: @corrinajo</li>
+                    <li>Lover of all things glitter</li>
+                </ul>
+            </section>
+            <section>
+                <h2>What we'll be covering in this class</h2>
+                <p>We'll be jumping in right where the intro class left off.</p>
+            </section>
+            <section>
+                <h3>We will be building a profile site from scratch</h3>
+                <img src="images/gdi-profile-layout.png" alt="today's project" />
+            </section>
+            <section data-background="#f05b62">
+                <h1 style="color: #fafafa;">Workshop files</h1>
+            </section>
+            <section>
+                <h3>Workshop files</h3>
+                <ul>
+                    <li>Download</li>
+                    <li>File structure</li>
+                    <li>Sample Images</li>
+                </ul>
+
+            </section>
+            <section data-background="#f05b62">
+                <h1 style="color: #fafafa;">Common Applications</h1>
+            </section>
+            <section>
+                <h3>Common Applications</h3>
+                <p>HTML &amp; CSS are awesome, right?</p>
+                <p>But how do people use them
+                    <span class="green">really?</span>
+                    <p>Here's a few things we'll be covering today:</p>
+                    <ul>
+                        <li class="fragment">Horizontal &amp; fixed navigation</li>
+                        <li class="fragment">Heros with full bleed background images</li>
+                        <li class="fragment">Border-radius on images &amp; elements</li>
+                        <li class="fragment">Custom font-faces</li>
+                        <li class="fragment">Three column layouts</li>
+                        <li class="fragment">Fancy buttons</li>
+                    </ul>
+            </section>
+            <section data-background="#f05b62">
+                <h1 style="color: #fafafa;">Standard Practices</h1>
+            </section>
+            <section>
+                <h3>Standard Practices</h3>
+                <ul>
+                    <li class="fragment">Reset CSS files</li>
+                    <li class="fragment">Standard widths and sizes</li>
+                    <li class="fragment">Containers for layout</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Reset CSS</h3>
+                <p>Even though HTML is the structure and CSS is the design, some HTML elements have default styles</p>
+                <p>Different browsers display these things differently. A reset gets rid of these inconsistencies.</p>
+                <p class="fragment">
+                    <strong>Examples include:</strong>
+                </p>
+                <ul class="fragment">
+                    <li>Bulleted lists like this one have standard bullets</li>
+                    <li>Paragraphs &amp; headings have default padding</li>
+                    <li>Links are blue and underlined</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Reset CSS</h3>
+                <div>
+                    Most elements:
+                    <pre><code class = "html">
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+</code></pre>
+                </div>
+                <div>
+                    Lists:
+                    <pre><code class = "html">
+  list-style: none;
+</code></pre>
+                </div>
+            </section>
+            <section>
+                <h3>Reset CSS</h3>
+                <p>We've done all the hard work for you! Instead of typing this out - we've included this in our example files.</p>
+            </section>
+            <section>
+                <h3>Standard widths and sizes</h3>
+                <ul>
+                    <li>Screen sizes vary from computer to computer. Standardize your site on different screen sizes by defining specific widths.</li>
+                    <li>Wrap your content in containers to control the max width it can span across a screen.</li>
+                    <li>Keep in mind screen sizes also mean different font size display.</li>
+                    <li>Retina screens have a higher pixel density and a larger resolution, so fonts appear smaller.</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Fixed vs. Fluid Width pages</h3>
+                <p>
+                    <strong class="blue">Fixed</strong>
+                </p>
+                <ul>
+                    <li>Fixed websites have a set width for the wrapper, usually 960px to 1024px.</li>
+                    <li>The elements inside the wrapper have a set width, or percentage of the wrapper width.</li>
+                    <li>No matter the screensize, the user always sees the same size site.</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Fixed vs. Fluid Width pages</h3>
+                <p>
+                    <strong class="blue">Fluid</strong>
+                </p>
+                <ul>
+                    <li>Also referred to as a liquid layout.</li>
+                    <li>Majority of the components, including the wrapper, have percentages for their widths.</li>
+                    <li>The layout adjusts for the width of the user's screen resolution.</li>
+                    <li>Sounds like a responsive site right!? More on that later.</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Containers</h3>
+                <p>Wrappers are a good way to center content if the screen width is wider than your content.</p>
+                <pre><code class = "html">
+  .container {
+      width: 100%; /* take up full viewport width */
+      max-width: 1400px; /* if viewport is larger than 1440px, 
+                            don't let it take up 100% */
+      margin: 0 auto; /* center content in the viewport */
+  }
+</code></pre>
+                <ul>
+                    <li>1. The container will take up 100% of the screen if the width of the viewport is less than 1440px.</li>
+                    <li>2. If the viewport is wider than 1440px, it will reach it's max width, and become centered in the viewport.</li>
+                </ul>
+            </section>
+            <section data-background="#f05b62">
+                <h1 style="color: #fafafa;">HTML5</h1>
+            </section>
+
+            <section>
+                <h3>HTML 5: What is it?</h3>
+                <p>Formally, HTML5 is the <a href="http://www.w3.org/TR/html5/" target="_blank">W3C’s specification</a> for the next version of HTML.</p>
+                <p>Informally, people use "HTML5" to refer to a whole set of new web standards and abilities:
+                    <ul class>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
+            </section>
+
+            <!-- Specifications-->
+            <section>
+                <h2>Quick History of HTML5</h2>
+                <ul>
+                    <li>
+                        <strong class="blue">2004:</strong>"WHAT" Working group formed. (WHATWG)
+                        <br/>
+                        <p>Members from Apple, Mozilla, &amp; Opera set out to develop HTML5.</li>
+                    <li class="fragment">
+                        <strong class="blue">2008:</strong>First verson of HTML5 published</br>
+                        <p>First draft is written, but changes are still coming. HTML5 is continually evolving.</p>
+                    </li>
+                    <li class="fragment">
+                        <strong class="blue">2008:</strong>Firefox 3 becomes HTML5 compatable.</li>
+                    <li class="fragment">
+                        <strong class="blue">Jan. 2010:</strong>YouTube now offers HTML5 video player.</li>
+
+
+                </ul>
+            </section>
+            <section>
+                <h2>Okay, not that quick history of HTML5</h2>
+                <ul>
+
+                    <li class="fragment">
+                        <strong class="blue">April 2010:</strong>Steve jobs trashes Flash &amp; bans it on all Apple devices in favor of HTML5.</li>
+                    <li class="fragment">
+                        <strong class="blue">Dec. 2010:</strong>Chrome opens HTML5 web store.</li>
+                    <li class="fragment">
+                        <strong class="blue">Sept. 2011:</strong>34% of top 100 sites use HTML5</li>
+                    <li class="fragment">
+                        <strong class="blue">Sept. 2012:</strong>WC3 proposes stable release of HTML5 by end of 2014!</li>
+                </ul>
+            </section>
+            <!-- Browser compatibility-->
+            <section>
+                <h2>What about the browsers?</h2>
+                <p>Percentage of HTML5 Elements supported:</p>
+                <ul>
+                    <li class="chrome">
+                        <strong>Chrome 35:</strong>
+                        <span class="green">92% supported</span>
+                    </li>
+                    <li class="opera">
+                        <strong>Opera 22:</strong>
+                        <span class="blue">90% supported</span>
+                    </li>
+                    <li class="firefox">
+                        <strong>Firefox 30:</strong>
+                        <span class="blue">84% supported</span>
+                    </li>
+                    <li class="webkit">
+                        <strong>Safari 7:</strong>
+                        <span class="blue">72% supported</span>
+                    </li>
+                    <li class="ie">
+                        <strong>Internet Explorer 11:</strong>
+                        <span class="blue">68% supported</span>
+                    </li>
+
+                </ul>
+            </section>
+            <section>
+                <h3>So what's so cool about it?</h3>
+                <img src="images/html5.svg" style="width:25%" alt="" class="no-border" />
+                <p>Too much to cover in our time together</p>
+                <p>But here are some highlights:</p>
+            </section>
+            <section>
+                <h2>Marks some old things obsolete</h2>
+                <h4>Examples</h4>
+                <ul>
+                    <li>Deprecated items (e.g.
+                        <code>frame, frameset, noframes</code>)</li>
+                    <li>Presentational elements and attributes replaced by CSS (e.g.
+                        <code>font, big, center</code>)</li>
+                </ul>
+                <a href="http://dev.w3.org/html5/spec/single-page.html#obsolete">Reference</a>
+            </section>
+            <section>
+                <h2>Redefines a few things</h2>
+                <p>Gives some old elements semantic meaning and separates them from presentation (e.g.
+                    <code>b, i, strong, em</code>)</p>
+            </section>
+
+
+            <!-- DOCTYPE -->
+            <section>
+                <section>
+                    <h2>HTML5 Doctype</h2>
+                    <pre><code class="xml">
+  &lt;!DOCTYPE html&gt;
+            </code></pre>
+                    <p>
+                        Minimum information required to ensure that a browser renders using standards mode
+                    </p>
+                </section>
+                <section>
+                    <h2>Old Doctypes</h2>
+                    <pre><code class="xml">
+  &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd"&gt;
+
+  &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+            </code></pre>
+                </section>
+            </section>
+
+            <!-- New Elements -->
+            <section>
+                <section>
+                    <h2>New Structural Elements</h2>
+                </section>
+                <section>
+                    <h2>&lt;section&gt;</h2>
+                    <ul>
+                        <li>Group together thematically related content</li>
+                        <li>Similar to prior use of the div, but div has no semantic meaning</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>&lt;header&gt;</h2>
+                    <ul>
+                        <li>Container for a group of introductory or navigational aids</li>
+                        <li>Document can have multiple header elements</li>
+                        <li>E.g. One for the page, one for each section</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>&lt;nav&gt;</h2>
+                    <ul>
+                        <li>Contains major navigational information</li>
+                        <li>Usually a list of links</li>
+                        <li>Often lives in the header</li>
+                        <li>E.g. site navigation</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>&lt;footer&gt;</h2>
+                    <ul>
+                        <li>Contains information about its containing element</li>
+                        <li>E.g. who wrote it, copyright, links to related content, etc.</li>
+                        <li>Document can have multiple footer elements</li>
+                        <li>E.g. One for the page, one for each section</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>&lt;aside&gt;</h2>
+                    <ul>
+                        <li>Tangentially related content</li>
+                        <li>E.g. sidebar, pull quotes</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>&lt;article&gt;</h2>
+                    <ul>
+                        <li>Self-contained related content</li>
+                        <li>E.g. blog posts, news stories, comments, reviews, forum posts</li>
+                    </ul>
+                </section>
+            </section>
+
+
+
+            <section>
+                <h3>Let's Develop It</h3>
+                <ul>
+                    <li>Use new HTML elements to layout the site</li>
+                    <li>Refer to the example design for hints.</li>
+                </ul>
+            </section>
+            <section data-background="#f05b62">
+                <h1 style="color: #fafafa;">Horizontal Fixed Nav</h1>
+            </section>
+            <section>
+                <h3>All the cool kids are doing it these days</h3>
+                <ul>
+                    <li>Horizontal fixed-to-top nav allows users to have access to navigational elements at all times.</li>
+                    <li>All the rage these days</li>
+                    <li>Be careful - screen heights vary, and it reduces the amount of content visible on smaller screens.</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Fixed Nav: HTML</h3>
+                <p>Let's include it in a header, since we know we'll be grouping related content here.</p>
+                <pre><code class="xml">
+<header>
+    <nav>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">My Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+</code></pre>
+            </section>
+            <section>
+                <h3>Fixed Nav: CSS</h3>
+                <p>Remember, using fixed position is like using absolute position, except that it's fixed to the viewport, not the containing element.</p>
+                <p>We also have to define a width for it, and it's location.</p>
+                <pre><code class="css">
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fafafa;
+    border-bottom: 2px solid #ccc;
+    height: 70px;
+    width: 100%;
+}</code></pre>
+            </section>
+            <section>
+                <h3>Fixed Nav: CSS</h3>
+                <p>Because we've fixed the nav to the top of the viewport, we need to bump the content of the
+                    <code>body</code>down to be visible to the user.</p>
+                <p>This should be the same, or more than, the height of the navigation bar.</p>
+                <pre><code class="css">
+body {
+    padding-top: 70px;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fafafa;
+    border-bottom: 2px solid #ccc;
+    height: 70px;
+    width: 100%;
+}</code></pre>
+            </section>
+            <section>
+                <h3>Fixed Nav: CSS</h3>
+                <p>Now we need to get those list items next to each other instead of stacked.</p>
+                <p>Let's float them to the left and add some padding to the links so they have a large clickable area.</p>
+                <pre><code class="css">body {padding-top: 70px;}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fafafa;
+    border-bottom: 2px solid #ccc;
+    height: 70px;
+    width: 100%;
+}
+nav li {
+    float: left;
+    width: auto;
+}
+nav li a {
+    padding: 25px 10px;
+    display: block;
+}
+</code></pre>
+            </section>
+            <section>
+                <h3>Fixed Nav: Adding a brand</h3>
+                <p>We can use an
+                    <code>H1</code>with text replacement to include a brand, or logo, in the corner that will still work if images are turned off, making it accesible to screen readers.</p>
+                <pre><code class="xml">
+<header>
+    <nav>
+    <h1 id="brand">Cara Jo Miller</h1>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">My Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+</code></pre>
+            </section>
+            <section>
+                <h3>Fixed Nav: Text replacement &amp; H1s</h3>
+                <pre><code class="css">#brand {
+    text-indent: -9000px;
+    background: url(../images/brand.png) no-repeat top left;
+    height: 60px;
+    width: 60px;
+    float: left;
+    margin: 5px;
+} 
+nav ul {
+    float: right;
+    width: auto;
+}   </code></pre>
+            </section>
+            <section>
+                <h3>Why Text Replacement?</h3>
+                <ul>
+                    <li>If we turn the CSS off for this page - the title will still be visible to the browser.</li>
+                    <li>If a user is coming to our site with a screen reader - the title of the site will be readable to them</li>
+                    <li>Search engines &hearts; it!</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Fixed Nav: Container</h3>
+                <p>Notice how the edge of the nav bumps up against the edge of the browser? Let's fix that by adding a container around it.</p>
+                <pre><code class="xml">
+<header>
+    <nav>
+        <div class="container">
+            <h1 id="brand">Cara Jo Miller</h1>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">My Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+</code></pre>
+            </section>
+            <section>
+                <h3>Fixed Nav: Container</h3>
+                <p>Let's give the container a fixed width and see what happens.</p>
+                <pre><code class="css">.container {
+    width: 1024px;
+    margin: 0 auto;
+}</code></pre>
+                <p>Now whereever we use
+                    <code>.container</code>it will be 1024px wide and centered.</p>
+            </section>
+            <section>
+            <h3>Develop It!</h3>
+            <p>Let's make some small tweaks to the navigation
+            <ul>
+                <li>Remove the underlines on the links with <code>text-decoration</code></li>
+                <li>Change the color of the links</li>
+                <li>Try adding a background color on hover</li>
+            </ul>
+
+        </section>
+            <section data-background="#f05b62">
+                <h1 style="color: #fafafa;">Hero Section</h1>
+            </section>
+            <section>
+                <h3>What is a Hero?</h3>
+                <ul>
+                    <li>Large banner image, prominently placed on a web page, generally in the front and center</li>
+                    <li>First visual a visitor encounters on the site and its purpose is to present an overview of the site's most important content</li>
+                    <li>Often consists of image and text, can be static or dynamic</li>
+                </ul>
+            </section>
+            <section>
+                <section>
+                    <h2>Hero Examples</h2>
+                </section>
+                <section>
+                    <img src="images/apple.png" />
+                </section>
+                <section>
+                    <img src="images/uber.png" />
+                </section>
+                <section>
+                    <img src="images/fostr.png" />
+                </section>
+                <section>
+                    <img src="images/ndesign.png" />
+                </section>
+                <section>
+                    <img src="images/karma.png" />
+                </section>
+            </section>
+            <section>
+                <h3>Hero: HTML</h3>
+                <p>Our Hero
+                    <code>section</code>, should look a little something like this:</p>
+                <pre><code class="xml">&lt;section id="hero">
+    <img src="images/cojo.jpg" alt="Cara Jo Miller" />
+    <h2>Cara Jo Miller</h2>
+    <span class="city">Boulder, CO</span>
+&lt;/section> </code></pre> 
+            </section>
+            <section>
+                <h3>Hero: CSS</h3>
+                <p>Now is where the fun really happens!</p>
+                <pre><code class="css">#hero {
+    background: url(../images/flatirons.png) no-repeat top left;
+    color: #fafafa;
+    text-align: center;
+}
+</code></pre> 
+            </section>
+<section>
+                <h3>Hero: CSS</h3>
+                <p>Let's give it a height and some padding too.</p>
+<pre><code class="css">#hero {
+    background: url(../images/flatirons.png) no-repeat top left;
+    color: #fafafa;
+    text-align: center;
+    height: 350px;
+    padding: 25px 0;
+}
+</code></pre> 
+<p>Remember our Box Model. Padding adds to the height &amp; width of elements.</p>
+<p>So the height of our hero will be <code>400px</code></p>
+            </section>
+            <section>
+                <h3>Well, that was unexpected...</h3>
+                <p>Things that are wrong with this hero right now:
+                    <ol>
+                        <li>That image of your face is way to big! And it's not even a circle!</li>
+                        <li>The background image is way too large</li>
+                        <li>The headline is really tiny</li>
+                    </ol>
+            </section>
+            <section>
+                <h3>Hero: Profile Image</h3>
+                <p>Let's make the profile image a little smaller.</p>
+                <p>We'll use CSS Targeting with the descendant selector to style the image.</p>
+                <pre><code class="css">#hero img {
+    width: 150px;
+}</code></pre>
+                <p>That should do it</p>
+            </section>
+            <section>
+                <section data-background="#f05b62">
+                    <h1 style="color: #fafafa;">Border Magic</h1>
+                </section>
+                <section>
+                    <h3>Turning squares into circles with magic!</h3>
+                    <p>Okay, it's not really magic, it's just a bit of CSS3.</p>
+                </section>
+                <section>
+                    <h3>Border-Radius</h3>
+                    <p>Simply put, allows you to create rounded corners on boxes.</p>
+                    <p>Designers rejoice!</p>
+                </section>
+                <section>
+                    <h3>Border-radius</h3>
+                    <p>20px radius on all corners</p>
+                    <pre><code class="css">#hero img {
+    border-radius: 20px;
+}</code></pre>
+                    <img src="images/radius-20.png" />
+                </section>
+                <section>
+                    <h3>Border-radius</h3>
+                    <p>10px radius on top left &amp; bottom right</p>
+                    <p>40px on top right &amp; bottom left</p>
+                    <pre><code class="css">#hero img {
+    border-radius: 10px 40px;
+}</code></pre>
+                    <img src="images/radius-10-40.png" />
+                </section>
+                <section>
+                    <h3>Border-radius</h3>
+                    <p>10px radius on top left</p>
+                    <p>20px radius top right</p>
+                    <p>40px radius bottom right</p>
+                    <p>80px radius bottom left</p>
+<pre><code class="css">#hero img {
+    border-radius: 10px 20px 40px 80px;
+}</code></pre>
+                    <img src="images/radius-10-20-40-80.png" />
+                </section>
+                <section>
+                    <h3>Border-radius</h3>
+                    <p>50% radius on all corners</p>
+                    <pre><code class="css">#hero img {
+    border-radius: 50%;
+}</code></pre>
+                    <img src="images/radius-50.png" />
+                </section>
+            </section>
+            <section>
+                <section data-background="#f05b62">
+                    <h1 style="color: #fafafa;">Vendor Prefixes</h1>
+                </section>
+                <section>
+                    <h3>Vendor Prefixes</h3>
+                    <p>HTML5 and CSS3 are still new!</p>
+                    <p>This is great, but it means that not all browsers treat new CSS3 properties the same</p>
+                </section>
+                <section>
+                    <h3>Vendor Prefixes</h3>
+                    <p>Flags it as a work-in-progress</p>
+                    <p>When finished, the browser should support the non-prefixed name</p>
+                </section>
+                <section>
+                    <h3>Vendor Prefixes</h3>
+                    <p>Each browser has their own:</p>
+                    <ul>
+                    <li><span class="green">Chrome:</span> -webkit-</li>
+                    <li><span class="green">Firefox:</span> -moz-</li>
+                    <li><span class="green">Safari:</span> -webkit-</li>
+                    <li><span class="green">Opera:</span> -o-</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Using Prefixes</h3>
+<pre><code class="css">#hero img {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}</code></pre>
+<p>Order matters! The non-prefixed version should always go last.</p>   
+            </section>
+            <section>
+                <h3>NOTE:</h3>
+                <p>While you should always use the vendor prefixes when writing code, today we're just going to use the non-prefixed property.</p>
+                <p>This is to save time during the code exercises</p>
+            </section>
+        </section>
+        <section data-background="#f05b62">
+            <h1 style="color: #fafafa;">Back to our Hero!</h1>
+        </section>
+        <section>
+            <h3>Background-size</h3>
+            <p>Notice how the image is too large for the section? Let's fix that with a new property called <code>background-size</code></p>
+<pre><code class="css">#hero {
+    background: url(../images/flatirons.png) no-repeat top left;
+    color: #fafafa;
+    text-align: center;
+    height: 350px;
+    padding: 25px 0;
+    background-size: cover;
+}
+</code></pre>
+    <p><code>cover</code> scales the image to the largest size such that both its width and its height can fit inside the content area.</p>
+        </section>
+
+        <section>
+            <h3>Develop It!</h3>
+            <p>Let's make some small tweaks to the Hero
+            <ul>
+                <li>Move the image down from the top.</li>
+                <li>Adjust the font size of the header.</li>
+                <li>Add a border to the span</li>
+            </ul>
+
+        </section>
+        <section data-background="#f05b62">
+            <h1 style="color: #fafafa;">3-column Content Area</h1>
+        </section>
+        <section>
+            <h3>Why 3 columns?</h3>
+            <p>Because 2 columns is so 2013</p>
+        </section>
+        <section>
+            <h3>3 Column: HTML</h3>
+            <p>Our code should look something like this:</p>
+<pre><code class="xml">&lt;section id="main-content">
+    <h3>...</h3>
+    &lt;section class="column">
+        &lt;img src="images/photographer.jpg">
+        &lt;h4>The Photographer</h4>
+        &lt;p>I travel to some pretty awesome places...</p>
+        &lt;a href="photos.html" class="btn">See my photos</a>
+    &lt;/section>   
+    &lt;!-- Repeat .column x3 --> </code></pre>    
+        </section>
+        <section>
+            <h3>3 Column: CSS</h3>
+            <p>Now that we have our 3 columns, we want them to appear next to each other. We can do this by floating them all left.</p>
+<pre><code class="css">.column {
+    float: left;
+    width: 30%;
+    padding: 15px;
+}        </code></pre>
+<p>We used 30%, because it let's us perfectly spaced columns without doing math! Don't forget padding (or margin) to give the columns so space.</p>
+        </section>
+        <section>
+            <h3>Wow. Large Images.</h3>
+            <p>The images didn't scale with the columns, because they ignore constraints like <code>div</code> width, unless you tell it to do so.</p>
+<pre><code class="css">.column img {
+    width: 90%;
+    max-width: 90%;
+}</code></pre>
+<p>There we go!</p>
+<p>Let's add a border radius to it too, because we &hearts; circles</p>
+<pre><code class="css">.column img {
+    width: 90%;
+    max-width: 90%;
+    border-radius: 50%;
+}</code></pre>
+        </section>
+        <section>
+            <h3>3 Column: Container</h3>
+            <p>We've got our 3 column layout set, our images are scaled based on the width of the column, but our columns are still bumping against the edges of the broswer.</p>
+<pre><code class="xml">&lt;section id="main-content">
+    <div class="container">
+        <h3>...</h3>
+        &lt;section class="column">
+            ...
+        &lt;/section>
+        &lt;section class="column">
+            ...
+        &lt;/section>
+        &lt;section class="column">
+            ...
+        &lt;/section>
+    </div>
+&lt;/section></code></pre>
+<p>Adding the container, that we already defined the width of, makes the everything line up.</p>
+        </section>
+        <section>
+            <h3>Develop It!</h3>
+            <p>Let's make some small tweaks to these columns
+            <ul>
+                <li>Adjust the font size of the main header of the content area</li>
+                <li>Adjust the font size of the headers in the columns. Try changing their colors too.</li>
+                <li>Add a border to the images to make them stand out a bit more.</li>
+            </ul>
+
+        </section>
+        </div>
+        <footer>
+            <div class="copyright">
+                Intermediate HTML/CSS &amp; Intro to Responsive Design &hearts; Girl Develop It Boulder --
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+                    <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" />
+                </a>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="reveal/lib/js/head.min.js"></script>
+    <script src="reveal/js/reveal.min.js"></script>
+
+    <script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [{
+            src: 'reveal/lib/js/classList.js',
+            condition: function() {
+                return !document.body.classList;
+            }
+        }, {
+            src: 'reveal/plugin/markdown/showdown.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'reveal/plugin/markdown/markdown.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'reveal/plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+                hljs.initHighlightingOnLoad();
+            }
+        }, {
+            src: 'reveal/plugin/zoom-js/zoom.js',
+            async: true,
+            condition: function() {
+                return !!document.body.classList;
+            }
+        }, {
+            src: 'reveal/plugin/notes/notes.js',
+            async: true,
+            condition: function() {
+                return !!document.body.classList;
+            }
+        }]
+    });
+    </script>
+
+</body>
+
+</html>
