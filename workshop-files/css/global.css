@@ -1,5 +1,102 @@
-body {background: magenta;} /* This is here to test if the CSS is linked properly. Delete once loaded. */
-
 /* Place site styles below! 
 
 Happy Coding! */
+body {
+	padding-top: 70px;
+	font-size: 16px;
+}
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #fafafa;
+	border-bottom: 2px solid #ccc;
+	height: 70px;
+	width: 100%;
+}
+nav ul {
+	float: right;
+	width: auto;
+}
+nav li {
+	float: left;
+	width: auto;
+}
+nav li a {
+	padding: 27px 10px;
+	display: block;
+	text-decoration: none;
+	color: #333;
+}
+nav li a:hover {
+	background: hotpink;
+	color: #fafafa;
+}
+
+#brand {
+	text-indent: -9000px;
+	background: url(../images/cojorado.png) no-repeat top left;
+	height: 60px;
+	width: 60px;
+	float: left;
+	margin: 5px;
+}
+.container {
+	width: 80%;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+#hero {
+	background: url(../images/flatirons.png) no-repeat top left;
+	text-align: center;
+	color: #fafafa;
+	padding: 25px 0;
+	height: 350px;
+	background-size: cover;
+}
+
+#hero img {
+	width: 150px;
+	border-radius: 50%;
+	margin-top: 30px;
+}
+#hero h2 {
+	font-size: 200%;
+	margin: 15px;
+}
+#hero .city {
+	border: 3px solid #fff;
+	padding: 10px 20px;
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
