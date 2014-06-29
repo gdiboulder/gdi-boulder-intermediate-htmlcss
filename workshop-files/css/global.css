@@ -4,6 +4,7 @@ Happy Coding! */
 body {
 	padding-top: 70px;
 	font-size: 16px;
+	font-family: helvetica, arial, sans-serif;
 }
 nav {
 	position: fixed;
@@ -62,7 +63,7 @@ nav li a:hover {
 	margin-top: 30px;
 }
 #hero h2 {
-	font-size: 200%;
+	font-size: 300%;
 	margin: 15px;
 }
 #hero .city {
@@ -71,26 +72,48 @@ nav li a:hover {
 	display: inline-block;
 	text-transform: uppercase;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#main-content {
+	padding: 25px 0;
+	overflow: hidden;
+}
+#main-content h3 {
+	font-size: 300%; 
+	text-align: center;
+}
+.column {
+	float: left;
+	width: 30%;
+	padding: 15px;
+	text-align: center;
+}
+.column img {
+	width: 90%;
+	max-width: 90%;
+	border-radius: 50%;
+	border: 5px solid #57BEC5;
+}
+.column h4 {
+	color: #57BEC5;
+	font-size: 200%;
+	font-weight: bold;
+	margin: 15px 0;
+}
+.column p {
+	font-size: 130%;
+	margin-bottom: 15px;
+}
+.column .btn {
+	border: 3px solid #57BEC5;
+	font-size: 150%;
+	display: inline-block;
+	text-decoration: none;
+	color: #57BEC5;
+	padding: 10px;
+}
+.column .btn:hover {
+	background: #57BEC5;
+	color: #fafafa;
+}
 
 
 
