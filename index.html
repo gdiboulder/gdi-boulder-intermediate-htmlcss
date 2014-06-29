@@ -19,7 +19,7 @@
     <!-- light editor-->
     <link rel="stylesheet" href="reveal/lib/css/light.css">
     <!-- dark editor<link rel="stylesheet" href="reveal/lib/css/dark.css">-->
-
+    <link rel="stylesheet" href="css/slides.css">
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
     if (window.location.search.match(/print-pdf/gi)) {
@@ -1175,34 +1175,23 @@ h1, h2, h3, h4, h5, h6 {
                 <h2 style="color: #fafafa;">Text Shadow</h2>
             </section>
             <!--Text Shadow-->
-            <section>
-                <h2>text-shadow</h2>
-                <p>Drops a shadow on text to help increase contrast with the background.</p>
-                <pre><code class="css">text-shadow: h-shadow v-shadow blur color|none|initial|inherit;</code></pre>
-            </section>
-            <section>
-                <h2>text-shadow</h2>
-                <pre><code>#example1 { 
-    text-shadow: 2px 2px 10px red; 
-}
+      <section>
+        <h2>text-shadow</h2>
+        <pre><code>#example1 { text-shadow: 2px 2px 10px red; }
+
 #example2 {
-    text-shadow: 1px 1px 10px red,
-    10px 10px 10px orange,
-    15px 15px 10px yellow,
-    20px 20px 10px green,
-    25px 25px 10px blue,
-    30px 30px 10px purple;
-}</code></pre>
-                <article class="text-shadow">
-                    <div style="text-shadow: 2px 2px 10px red;">lorem ipsum</div>
-                    <div style="text-shadow: 1px 1px 10px red,
+text-shadow: 1px 1px 10px red,
             10px 10px 10px orange,
             15px 15px 10px yellow,
             20px 20px 10px green,
             25px 25px 10px blue,
-            30px 30px 10px purple;">lorem ipsum</div>
-                </article>
-            </section>
+            30px 30px 10px purple;
+}</code></pre>
+        <article class="text-shadow">
+          <div class="example1">lorem ipsum</div>
+          <div class="example2">lorem ipsum</div>
+        </article>
+      </section>
             <section data-background="#f05b62">
                 <h2 style="color: #fafafa;">Box Shadow</h2>
             </section>
@@ -1243,6 +1232,9 @@ h1, h2, h3, h4, h5, h6 {
             <p>Remember: Be subtle!</p>
             <p>Add a box-shadow to the nav.</p>
         </section>
+        
+        <!-- Gradients-->
+      <section>
         <section data-background="#f05b62">
                 <h2 style="color: #fafafa;">CSS Gradients</h2>
             </section>
@@ -1262,11 +1254,11 @@ background-image: linear-gradient(right, red, orange, yellow, green, blue, indig
 background-image: linear-gradient(bottom right, red, orange, yellow, green, blue, indigo, violet);
 }</code></pre>
           <article class="gradients">
-            <div style="background-image: -webkit-linear-gradient(red, orange, yellow, green, blue, indigo, violet); height: 200px; width: 200px; margin: 20px; float: left;">
+            <div class="linear-example1">
             </div>
-            <div style="background-image: -webkit-linear-gradient(right, red, orange, yellow, green, blue, indigo, violet); height: 200px; width: 200px; margin: 20px; float: left;">
+            <div class="linear-example2">
             </div>
-            <div style="background-image: -webkit-linear-gradient(bottom right, red, orange, yellow, green, blue, indigo, violet); height: 200px; width: 200px; margin: 20px; float: left;">
+            <div class="linear-example3">
             </div>
           </article>
         </section>
@@ -1282,11 +1274,11 @@ background-image: linear-gradient(right, red, white);
 background-image: linear-gradient(bottom right, red, white);
 }</code></pre>
           <article class="gradients">
-            <div style="background-image: -webkit-linear-gradient(red, white); height: 200px; width: 200px; margin: 20px; float: left;">
+            <div class="linear-example4">
             </div>
-            <div style="background-image: -webkit-linear-gradient(right, red, white); height: 200px; width: 200px; margin: 20px; float: left;">
+            <div class="linear-example5">
             </div>
-            <div style="background-image: -webkit-linear-gradient(bottom right, red, white); height: 200px; width: 200px; margin: 20px; float: left;">
+            <div class="linear-example6">
             </div>
           </article>
         </section>
@@ -1302,11 +1294,11 @@ background-image: linear-gradient(bottom right, red, white);
   background-image: radial-gradient(0 50%, circle, red, orange, yellow, green, blue, indigo, violet);
 }</code></pre>
           <article class="gradients">
-            <div style="background-image: -webkit-radial-gradient(circle cover, red, orange, yellow, green, blue, indigo, violet); height: 200px; width: 200px; margin: 20px; float: left;">
+            <div class="radial-example1">
             </div>
-            <div style="background-image: -webkit-radial-gradient(0 0, circle, red, orange, yellow, green, blue, indigo, violet); height: 200px; width: 200px; margin: 20px;float: left; ">
+            <div class="radial-example2">
             </div>
-            <div style="background-image: -webkit-radial-gradient(0 50%, circle, red, orange, yellow, green, blue, indigo, violet); height: 200px; width: 200px; margin: 20px;float: left; ">
+            <div class="radial-example3">
             </div>
           </article>
         </section>
@@ -1322,31 +1314,33 @@ background-image: linear-gradient(bottom right, red, white);
   background-image: radial-gradient(0 50%, circle, red, white);
 }</code></pre>
           <article class="gradients">
-            <article class="gradients">
-            <div style="background-image: -webkit-radial-gradient(circle cover, red, white); height: 200px; width: 200px; margin: 20px; float: left;">
+            <div class="radial-example4">
             </div>
-            <div style="background-image: -webkit-radial-gradient(0 0, circle, red, white); height: 200px; width: 200px; margin: 20px;float: left; ">
+            <div class="radial-example5">
             </div>
-            <div style="background-image: -webkit-radial-gradient(0 50%, circle, red, white); height: 200px; width: 200px; margin: 20px;float: left; ">
+            <div class="radial-example6">
             </div>
-          </article>
           </article>
         </section>
         <section>
           <h2>CSS gradients are a pain to do from scratch</h2>
           <p>That's why people have made things like the <a href="http://www.colorzilla.com/gradient-editor/" target="_blank">Gradient Editor</a> to make our lives easier!</p>
         </section>
+      
+
+
         <section>
             <h3>Develop It!</h3>
             <p>Add a background gradient to a section of your site.</p>
         </section>
-
+</section>
         
         <section>
-          <h2>Transitions</h2>
-          <p>Allow property changes in CSS values to occur smoothly over a specified duration</p>
-          <p class="fragment">Create some awesome effects without any JavaScript</p>
-        </section>
+          <section data-background="#f05b62">
+                <h2 style="color: #fafafa;">Transitions</h2>
+                <h4 style="color: #fafafa;">Allow property changes in CSS values to occur smoothly over a specified duration</h4>
+                <h4 style="color: #fafafa;">Create some awesome effects without any JavaScript</h4>
+            </section>
         <section>
           <h2>Transition Triggers</h2>
           <ul>
@@ -1392,16 +1386,32 @@ background-image: linear-gradient(bottom right, red, white);
           <pre><code>
 .example1 { transition-duration: 2s; }
           </code></pre>
-
+          <div class="sliders" style="width:40%;">
+            <p>
+              <span class="value">2</span>s duration
+              <input type="range" min="0" max="10" value="3">
+            </p>
+          </div>
+          <div class="example">
+          </div>
         </section>
         <section class="transition-delay">
           <h2>transition-delay</h2>
-          <p>Delay transitions from the moment a trigger happens</p>
-          <pre><code>.example1 { transition-delay: 2s; }</code></pre>
+          <p>delay transitions from the moment a trigger happens</p>
+          <pre><code>.example1 { transition-delay: 0s; }
+.example2 { transition-delay: 1s; }
+.example3 { transition-delay: 2s; }
+.example4 { transition-delay: 3s; }</code></pre>
+          <article>
+            <div class="example4">3</div>
+            <div class="example3">2</div>
+            <div class="example2">1</div>
+            <div class="example1">0</div>
+          </article>
         </section>
         <section class="transition-timing-function">
           <h2>transition-timing-function</h2>
-          <p>Determines how intermediate values are calculated</p>
+          <p>determines how intermediate values are calculated</p>
           <pre><code>.example { transition-timing-function: ease; }</code></pre>
           <article>
             <div class="ease">ease</div>
@@ -1423,7 +1433,101 @@ background-image: linear-gradient(bottom right, red, white);
             <p>Pick a transition property and apply it to an element.</p>
             <p>Hint: The transition will only work if it has a pseudo class, like :hover</p>
         </section>
+      </section>
+        
+        <!-- Transformations-->
+      <section>
+        <section data-background="#f05b62">
+                <h2 style="color: #fafafa;">Transforms</h2>
+                <h4 style="color: #fafafa;">Allow elements rendered by CSS to be transformed in space</h4>
+        </section>
+        <section>
+          <h2>Transform: Scale</h2>
+          <p>scales the element</p>
+          <p>transform:  scale(sx[, sy]);</p>
+          <article class="transform-scale">
+            <div class="example1">
+              scale(2);
+            </div>
 
+            <div class="example2">
+              scale(0.5);
+            </div>
+
+            <div class="example4">
+              scale(1, 0.5);
+            </div>
+
+            <div class="example3">
+              scale(0.5, 1);
+            </div>
+          </article>
+        </section>
+        <section>
+          <h2>Transform: Rotate</h2>
+          <p>rotates the element degrees around its origin</p>
+          <p>transform: rotate(angle);</p>
+          <article class="transform-rotate">
+            <div class="example1">
+              rotate(45deg);
+            </div>
+
+            <div class="example2">
+              rotate(-45deg);
+            </div>
+
+            <div class="example3">
+              rotate(-90deg);
+            </div>
+
+            <div class="example4">
+              rotate(180deg);
+            </div>
+          </article>
+        </section>
+        <section>
+          <h2>Transform: Translate</h2>
+          <p>move element using x and y coordinates</p>
+          <p>transform: translate(ax[, ay]);</p>
+          <article class="transform-translate">
+            <div class="example1">
+              translate(20px);
+            </div>
+
+            <div class="example2">
+              translate(0, 20px);
+            </div>
+
+            <div class="example3">
+              translate(-20px, 20px);
+            </div>
+          </article>
+        </section>
+        <section>
+          <h2>Transform-origin</h2>
+          <p>the x and y origin for transformation</p>
+          <p>transform-origin: x-offset y-offset;</p>
+          <article class="transform-origin">
+            <div class="example1">
+              transform-origin(top, left)
+            </div>
+
+            <div class="example2">
+              transform-origin(50%, 50%)
+            </div>
+
+            <div class="example3">
+              transform-origin(0, 50px)
+            </div>
+          </article>
+        </section>
+        <section>
+            <h3>Develop It!</h3>
+            <p>Pick a transform property and apply it to an element.</p>
+            <p>Hint: The transforms, like transitions, will only work if it has a pseudo class, like :hover</p>
+            <p>Extra Credit: Use it with transition to make the transform smoother.</p>
+        </section>
+      </section>
         <section data-background="#f05b62">
                 <h2 style="color: #fafafa;">Responsive Web Design (RWD)</h2>
             </section>
@@ -1443,9 +1547,9 @@ background-image: linear-gradient(bottom right, red, white);
         <section>
           <h2>Why it's awesome</h2>
           <p>RWD modifies the presentation of a site, without modifying the content of the page. So no matter what, every user has access to the same information.</p>
-          <p><img src="images/responsive-example.png" alt="responsive example" />
+        <img src="images/responsive-example.png" alt="responsive example" />
         </section>
-      </section>
+      
       <section>
         <h2>How did we get here?</h2>
           <ul>
@@ -1494,7 +1598,7 @@ background-image: linear-gradient(bottom right, red, white);
         </section>
         <section>
           <section>
-            <h2>Magical Media Queries</h2>
+            <h2>Media Queries</h2>
             <p>Media queries apply certain CSS in certain situations.</p>
             <ul>
              <li>Print Media</li>
@@ -1776,7 +1880,8 @@ p {
 
     <script src="reveal/lib/js/head.min.js"></script>
     <script src="reveal/js/reveal.min.js"></script>
-
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/slides.js"></script>
     <script>
     // Full list of configuration options available here:
     // https://github.com/hakimel/reveal.js#configuration
