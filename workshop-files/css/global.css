@@ -1,10 +1,15 @@
 /* Place site styles below! 
 
 Happy Coding! */
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic|Bree+Serif);
+
 body {
 	padding-top: 70px;
 	font-size: 16px;
-	font-family: helvetica, arial, sans-serif;
+	font-family: 'Lato', sans-serif;
+}
+h1, h2, h3, h4, h5 {
+	font-family: 'Bree Serif', serif;
 }
 nav {
 	position: fixed;
@@ -14,6 +19,7 @@ nav {
 	border-bottom: 2px solid #ccc;
 	height: 70px;
 	width: 100%;
+	font-weight: 700;
 }
 nav ul {
 	float: right;
@@ -28,9 +34,14 @@ nav li a {
 	display: block;
 	text-decoration: none;
 	color: #333;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
 }
 nav li a:hover {
-	background: hotpink;
+	background: #ee4579;
 	color: #fafafa;
 }
 
@@ -43,13 +54,12 @@ nav li a:hover {
 	margin: 5px;
 }
 .container {
-	width: 80%;
-	max-width: 1024px;
+	width: 1024px;
 	margin: 0 auto;
 }
 
 #hero {
-	background: url(../images/flatirons.png) no-repeat top left;
+	background: url(../images/tini-noblur.jpg) no-repeat top left;
 	text-align: center;
 	color: #fafafa;
 	padding: 25px 0;
@@ -61,6 +71,17 @@ nav li a:hover {
 	width: 150px;
 	border-radius: 50%;
 	margin-top: 30px;
+	opacity: 1;
+	transition: all 1s ease-in-out;
+
+}
+#hero img:hover {
+	opacity: .8;
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+	-o-transform: rotate(5deg);
+	-ms-transform: rotate(5deg);
+	transform: rotate(5deg);
 }
 #hero h2 {
 	font-size: 300%;
@@ -90,10 +111,11 @@ nav li a:hover {
 	width: 90%;
 	max-width: 90%;
 	border-radius: 50%;
-	border: 5px solid #57BEC5;
+	border: 5px solid #ccc;
+	box-shadow: 0 0px 10px 0px rgba(238, 69, 121, 1);
 }
 .column h4 {
-	color: #57BEC5;
+	color: #ee4579;
 	font-size: 200%;
 	font-weight: bold;
 	margin: 15px 0;
@@ -103,23 +125,34 @@ nav li a:hover {
 	margin-bottom: 15px;
 }
 .column .btn {
-	border: 3px solid #57BEC5;
+	border: 3px solid #ee4579;
 	font-size: 150%;
 	display: inline-block;
 	text-decoration: none;
-	color: #57BEC5;
+	color: #ee4579;
 	padding: 10px;
 }
 .column .btn:hover {
-	background: #57BEC5;
+	background: rgba(238, 69, 121, .5);
 	color: #fafafa;
 }
 
 
+/* iPad */
+@media screen and (max-width: 1024px) {
+	body {
+		background: lime;
+	}
+	.container {width: 80%;}
+	.column {width: 25%;}
+}
 
 
-
-
-
+/* iphone */
+@media screen and (max-width: 480px) {
+	body {
+		background: magenta;
+	}
+}
 
 

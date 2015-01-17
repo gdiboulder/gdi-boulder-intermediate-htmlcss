@@ -1,122 +1,160 @@
-body {color: #333; 
-    font-family: helvetica, arial, sans-serif;
-    padding-top: 70px;
+/* Place site styles below! 
+
+Happy Coding! */
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic|Bree+Serif);
+
+body {
+	padding-top: 70px;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	color: #656771;
 }
-p {
-    line-height: 20px;
+h1, h2, h3, h4, h5 {
+	font-family: 'Bree Serif', serif;
 }
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: #fafafa;
-    border-bottom: 2px solid #ccc;
-    height: 70px;
-    width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #fafafa;
+	border-bottom: 2px solid #ccc;
+	height: 70px;
+	width: 100%;
+	font-weight: 700;
 }
 nav ul {
 	float: right;
+	width: auto;
 }
 nav li {
-    float: left;
-    width: auto;
+	float: left;
+	width: auto;
 }
 nav li a {
-    padding: 25px 10px;
-    display: block;
-    text-decoration: none;
-    color: #333;
+	padding: 27px 10px;
+	display: block;
+	text-decoration: none;
+	color: #656771;
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-ms-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
 }
 nav li a:hover {
-    background: #e5e5e5;
+	background: #ee4579;
+	color: #fafafa;
 }
+
 #brand {
 	text-indent: -9000px;
-    background: url(../images/cojorado.png) no-repeat top left;
-    height: 45px;
-    width: 45px;
-    float: left;
-    margin: 10px;
-} 
-
+	background: url(../images/cojorado.png) no-repeat top left;
+	height: 60px;
+	width: 60px;
+	float: left;
+	margin: 5px;
+}
 .container {
-    width: 1024px; 
-    margin: 0 auto;
+	width: 1024px;
+	margin: 0 auto;
 }
 
 #hero {
-	background: url(../images/flatirons.png) no-repeat top left;
+	background: url(../images/tini-noblur.jpg) no-repeat top left;
 	text-align: center;
 	color: #fafafa;
-	background-size: cover;
-	height: 350px;
 	padding: 25px 0;
+	height: 350px;
+	background-size: cover;
 }
 
 #hero img {
-	width: 150px; 
+	width: 150px;
 	border-radius: 50%;
-    margin-top: 30px;
+	margin-top: 30px;
+	opacity: 1;
+	transition: all 1s ease-in-out;
+
+}
+#hero img:hover {
+	opacity: .8;
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+	-o-transform: rotate(5deg);
+	-ms-transform: rotate(5deg);
+	transform: rotate(5deg);
 }
 #hero h2 {
-    font-size: 400%;
-    margin: 10px;
+	font-size: 300%;
+	margin: 15px;
 }
-#hero span {
-    border: 2px solid white;
-    padding: 10px 20px;
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 150%;
+#hero .city {
+	border: 3px solid #fff;
+	padding: 10px 20px;
+	display: inline-block;
+	text-transform: uppercase;
 }
-#main-content{
-    text-align: center;
-    padding: 25px 0;
-    overflow: hidden;
+#main-content {
+	padding: 25px 0;
+	overflow: hidden;
 }
-#main-content h3{
-    font-size: 250%;
-    margin: 20px 0;
+#main-content h3 {
+	font-size: 300%; 
+	text-align: center;
 }
 .column {
-    float: left;
-    width: 30%;
-    padding: 15px;
+	float: left;
+	width: 30%;
+	padding: 15px;
+	text-align: center;
 }
 .column img {
-    width: 70%;
-    max-width:70%;
-    border-radius: 50%;
-    border: 5px solid #57BEC5;
-    margin-bottom: 20px;
+	width: 90%;
+	max-width: 90%;
+	border-radius: 50%;
+	border: 5px solid white;
+	box-shadow: 0 3px 0px 0px rgba(0,0,0, .1), ;
 }
 .column h4 {
-    color: #57BEC5;
-    font-size: 150%;
-    margin-bottom: 15px;
+	color: #ee4579;
+	font-size: 200%;
+	font-weight: bold;
+	margin: 15px 0;
+}
+.column p {
+	font-size: 110%;
+	line-height: 23px;
+	margin-bottom: 15px;
 }
 .column .btn {
-   border: 2px solid #57BEC5;
-    padding: 10px 20px;
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 150%;
-    text-decoration: none;
-    color: #57BEC5;
+	border: 3px solid #ee4579;
+	font-size: 150%;
+	display: inline-block;
+	text-decoration: none;
+	color: #ee4579;
+	padding: 10px;
+}
+.column .btn:hover {
+	background: rgba(238, 69, 121, .5);
+	color: #fafafa;
 }
 
-#social {
-    background: #57BEC5;
-    color: #fafafa;
-    padding: 25px 0;
-    overflow: hidden;
+
+/* iPad */
+@media screen and (max-width: 1024px) {
+	body {
+		background: lime;
+	}
+	.container {width: 80%;}
+	.column {width: 25%;}
 }
-#social ul {
-	width: 5200px;
-	margin: 0 auto;
+
+
+/* iphone */
+@media screen and (max-width: 480px) {
+	body {
+		background: magenta;
+	}
 }
-#social li {
-	float: left;
-	width: auto;
-	padding: 20px;
-}
+
+
